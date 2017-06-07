@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wai-pE-i6n">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ZJFloatMenu-Demo-->
+        <scene sceneID="4E7-Hm-SpY">
+            <objects>
+                <viewController id="NSL-mG-ujq" customClass="ExampleViewController" customModule="ZJFloatMenuDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Jn-Gp-QM6"/>
+                        <viewControllerLayoutGuide type="bottom" id="laO-qd-JNR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P93-zU-LIo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9U-ZM-geo" customClass="ReverseButton" customModule="ZJFloatMenuDemo" customModuleProvider="target">
+                                <rect key="frame" x="279" y="80" width="80" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="3rQ-9K-YWb"/>
+                                    <constraint firstAttribute="height" constant="32" id="szi-47-6l7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="更多" image="下箭头">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="NSL-mG-ujq" eventType="touchUpInside" id="aAt-CH-Uhx"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I1J-fP-KtE">
+                                <rect key="frame" x="87.5" y="210" width="200" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="gGu-iO-be4"/>
+                                    <constraint firstAttribute="width" constant="200" id="vrj-Sj-BfS"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Fade"/>
+                                    <segment title="Line"/>
+                                    <segment title="Point"/>
+                                </segments>
+                                <connections>
+                                    <action selector="ShowTypeChanged:" destination="NSL-mG-ujq" eventType="valueChanged" id="kZp-MX-PMS"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="显示动画类型：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YpV-DF-A98">
+                                <rect key="frame" x="87" y="181" width="121.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是否显示箭头：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2E-hN-BTd">
+                                <rect key="frame" x="87" y="144" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EoO-xi-gbR" customClass="ReverseButton" customModule="ZJFloatMenuDemo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="80" width="80" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="lRr-43-POh"/>
+                                    <constraint firstAttribute="height" constant="32" id="o1G-jq-gXU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="更多" image="下箭头">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="NSL-mG-ujq" eventType="touchUpInside" id="OGG-tW-vd4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnA-xX-azJ" customClass="ReverseButton" customModule="ZJFloatMenuDemo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="619" width="80" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="gCS-y7-Kj0"/>
+                                    <constraint firstAttribute="height" constant="32" id="vnA-U7-XSb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="更多" image="下箭头">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="NSL-mG-ujq" eventType="touchUpInside" id="fTZ-hX-a4w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yST-aQ-qVi" customClass="ReverseButton" customModule="ZJFloatMenuDemo" customModuleProvider="target">
+                                <rect key="frame" x="279" y="619" width="80" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Imx-5K-34M"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Wqa-OQ-m5k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="更多" image="下箭头">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="NSL-mG-ujq" eventType="touchUpInside" id="gj5-Bm-C3f"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="遮罩透明度：0.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsR-Xj-VKt">
+                                <rect key="frame" x="87" y="262" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lZ5-YZ-KFW">
+                                <rect key="frame" x="85.5" y="291" width="204" height="31"/>
+                                <connections>
+                                    <action selector="opaqueChanged:" destination="NSL-mG-ujq" eventType="valueChanged" id="YWY-PJ-xUd"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNA-7l-Fua">
+                                <rect key="frame" x="185.5" y="385" width="4.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-jG-Cqi">
+                                <rect key="frame" x="217" y="139" width="51" height="31"/>
+                                <connections>
+                                    <action selector="arrowShowChanged:" destination="NSL-mG-ujq" eventType="valueChanged" id="Rjw-wM-lHG"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lZ5-YZ-KFW" firstAttribute="leading" secondItem="I1J-fP-KtE" secondAttribute="leading" id="106-oi-I09"/>
+                            <constraint firstItem="g2E-hN-BTd" firstAttribute="leading" secondItem="YpV-DF-A98" secondAttribute="leading" id="5TD-BW-6B6"/>
+                            <constraint firstAttribute="trailing" secondItem="i9U-ZM-geo" secondAttribute="trailing" constant="16" id="6GR-WN-Dax"/>
+                            <constraint firstItem="I1J-fP-KtE" firstAttribute="centerX" secondItem="P93-zU-LIo" secondAttribute="centerX" id="6JZ-Ei-Fac"/>
+                            <constraint firstItem="KsR-Xj-VKt" firstAttribute="top" secondItem="I1J-fP-KtE" secondAttribute="bottom" constant="16" id="6sB-XY-Bo7"/>
+                            <constraint firstItem="g2E-hN-BTd" firstAttribute="top" secondItem="1Jn-Gp-QM6" secondAttribute="bottom" constant="80" id="85I-ur-kXi"/>
+                            <constraint firstItem="YpV-DF-A98" firstAttribute="leading" secondItem="I1J-fP-KtE" secondAttribute="leading" id="EAW-2u-2YN"/>
+                            <constraint firstItem="EoO-xi-gbR" firstAttribute="top" secondItem="1Jn-Gp-QM6" secondAttribute="bottom" constant="16" id="HRI-tl-36y"/>
+                            <constraint firstItem="i9U-ZM-geo" firstAttribute="top" secondItem="1Jn-Gp-QM6" secondAttribute="bottom" constant="16" id="JIr-zA-dZW"/>
+                            <constraint firstItem="I1J-fP-KtE" firstAttribute="top" secondItem="YpV-DF-A98" secondAttribute="bottom" constant="8" id="Q4w-pk-bik"/>
+                            <constraint firstItem="laO-qd-JNR" firstAttribute="top" secondItem="yST-aQ-qVi" secondAttribute="bottom" constant="16" id="Tzk-gr-af5"/>
+                            <constraint firstItem="lZ5-YZ-KFW" firstAttribute="trailing" secondItem="I1J-fP-KtE" secondAttribute="trailing" id="VVr-Nu-Ii3"/>
+                            <constraint firstItem="iNA-7l-Fua" firstAttribute="centerX" secondItem="P93-zU-LIo" secondAttribute="centerX" id="hDt-XB-6Lu"/>
+                            <constraint firstItem="laO-qd-JNR" firstAttribute="top" secondItem="NnA-xX-azJ" secondAttribute="bottom" constant="16" id="hnz-Vq-pnl"/>
+                            <constraint firstItem="KsR-Xj-VKt" firstAttribute="leading" secondItem="YpV-DF-A98" secondAttribute="leading" id="i8a-QI-ZcO"/>
+                            <constraint firstItem="EoO-xi-gbR" firstAttribute="leading" secondItem="P93-zU-LIo" secondAttribute="leading" constant="16" id="jt4-PI-IOC"/>
+                            <constraint firstItem="NnA-xX-azJ" firstAttribute="leading" secondItem="P93-zU-LIo" secondAttribute="leading" constant="16" id="kjg-fM-bd5"/>
+                            <constraint firstAttribute="trailing" secondItem="yST-aQ-qVi" secondAttribute="trailing" constant="16" id="rix-M6-l6V"/>
+                            <constraint firstItem="iNA-7l-Fua" firstAttribute="top" secondItem="lZ5-YZ-KFW" secondAttribute="bottom" constant="64" id="rnb-rQ-kbh"/>
+                            <constraint firstItem="OOu-jG-Cqi" firstAttribute="centerY" secondItem="g2E-hN-BTd" secondAttribute="centerY" id="soC-HS-UNc"/>
+                            <constraint firstItem="OOu-jG-Cqi" firstAttribute="leading" secondItem="g2E-hN-BTd" secondAttribute="trailing" constant="8" id="vvm-bC-t0t"/>
+                            <constraint firstItem="YpV-DF-A98" firstAttribute="top" secondItem="g2E-hN-BTd" secondAttribute="bottom" constant="16" id="yOk-1l-07h"/>
+                            <constraint firstItem="lZ5-YZ-KFW" firstAttribute="top" secondItem="KsR-Xj-VKt" secondAttribute="bottom" constant="8" id="zxa-lv-bYW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ZJFloatMenu-Demo" id="LXl-Ra-2tt">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="XI6-kC-O5H">
+                            <connections>
+                                <action selector="buttonItemClick:" destination="NSL-mG-ujq" id="9JI-FT-vjV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="label" destination="iNA-7l-Fua" id="Hwp-VS-GpC"/>
+                        <outlet property="opaqueLabel" destination="KsR-Xj-VKt" id="em9-ZL-zNh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JAB-Jf-Kos" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3698.4000000000001" y="243.32833583208398"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1PX-ki-jeT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wai-pE-i6n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JGz-Hu-0Ux">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NSL-mG-ujq" kind="relationship" relationship="rootViewController" id="cl4-B9-6tX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M81-dH-pfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2956" y="243"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="下箭头" width="16" height="16"/>
+    </resources>
+</document>
